@@ -1,0 +1,57 @@
+REPOSITÓRIO: superpowers
+TIPO: Fork Público (espelho do upstream, branch main)
+LINGUAGEM: Shell + Markdown (skills)
+URL (seu fork):    https://github.com/odilsonriquelme/superpowers
+UPSTREAM (fork de): https://github.com/obra/superpowers
+
+DESCRIÇÃO
+---------
+Superpowers é uma METODOLOGIA COMPLETA de desenvolvimento de software para agentes de
+codificação, construída sobre um conjunto de SKILLS COMPOSÁVEIS + instruções iniciais que
+garantem que o agente as utilize. Mantido por obra (Jesse Vincent).
+
+Filosofia (do README): em vez de sair escrevendo código, o agente PARA, extrai uma spec da
+conversa, mostra em pedaços digeríveis, monta um plano de implementação claro, e executa
+com TDD red/green de verdade, YAGNI e DRY.
+
+MULTI-HARNESS
+-------------
+Funciona em muitos agentes — há pastas de plugin/config para cada um:
+.claude-plugin/ .codex-plugin/ .cursor-plugin/ .kimi-plugin/ .opencode/ .pi/
+Suporta (do README): Claude Code, Antigravity, Codex (App/CLI), Cursor, Factory Droid,
+Gemini CLI, GitHub Copilot CLI, Kimi Code, OpenCode, Pi.
+
+AS 14 SKILLS (skills/) — o núcleo da metodologia
+-------------------------------------------------
+brainstorming                  → explorar o problema antes de codar
+writing-plans / executing-plans→ escrever e executar planos de implementação
+writing-skills                 → criar novas skills
+test-driven-development        → TDD red/green rigoroso
+systematic-debugging           → depuração sistemática
+subagent-driven-development    → desenvolvimento orientado a subagentes
+dispatching-parallel-agents    → despachar agentes em paralelo
+requesting-code-review / receiving-code-review → fluxo de revisão de código
+using-git-worktrees            → trabalhar com git worktrees
+finishing-a-development-branch → finalizar uma branch
+verification-before-completion → verificar antes de dar por pronto
+using-superpowers              → como usar o próprio sistema
+
+ESTRUTURA
+---------
+skills/    → as 14 skills (cada uma um diretório com SKILL.md)
+hooks/     → hooks por harness (hooks.json, hooks-codex.json, hooks-cursor.json,
+             session-start*) que injetam as instruções no início da sessão
+scripts/   → utilitários (bump-version.sh)
+docs/, tests/, assets/ → documentação, testes e imagens
+CLAUDE.md / AGENTS.md / GEMINI.md → instruções por harness
+README.md / RELEASE-NOTES.md → documentação. De terceiros — não editar.
+
+RELAÇÃO COM OUTROS REPOS
+------------------------
+Mesmo TEMA do everything-claude-code, spec-kit e get-shit-done (metodologias/skills para
+agentes). Superpowers é centrado em TDD + planejamento + skills composáveis.
+
+OBSERVAÇÃO (fork)
+-----------------
+Fork espelho do upstream obra/superpowers. README/skills são de terceiros — não editar.
+Push deste repo vai só para o SEU fork. Para atualizar: "Sync fork" na web.
